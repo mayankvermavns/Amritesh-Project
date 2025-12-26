@@ -1,0 +1,360 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #ff4d05; /* Orange-Red Energy Color */
+    --dark: #111;
+    --grey: #333;
+    --light: #f4f4f4;
+    --white: #fff;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary);
+}
+
+.logo {
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background: var(--primary);
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1350&q=80') center/cover;
+}
+
+.hero-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h4 {
+    color: var(--primary);
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    margin-left: 10px;
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--primary);
+}
+
+/* Features */
+.features {
+    background: var(--dark);
+    padding: 60px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: var(--grey);
+    padding: 40px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.feature-card:hover {
+    background: var(--primary);
+    transform: translateY(-10px);
+}
+
+.feature-card .icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* About */
+.about {
+    padding: 100px 8%;
+    background: var(--white);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    border-left: 10px solid var(--primary);
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* BMI Section */
+.bmi-section {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1350&q=80');
+    padding: 80px 8%;
+    color: var(--white);
+    text-align: center;
+}
+
+.bmi-form {
+    margin-top: 30px;
+}
+
+.bmi-form input {
+    padding: 12px;
+    width: 200px;
+    margin: 10px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+/* Pricing */
+.pricing {
+    padding: 100px 8%;
+    background: var(--light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+}
+
+.section-title span {
+    color: var(--primary);
+}
+
+.pricing-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: var(--white);
+    padding: 40px;
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.price-card.popular {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 20px;
+    font-size: 12px;
+}
+
+.price {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 18px;
+    color: #777;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.price-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-card li.disabled {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/* Contact */
+.contact {
+    padding: 100px 8%;
+    background: var(--dark);
+    color: white;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--grey);
+    padding: 40px;
+}
+
+.contact-box input, .contact-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #222;
+    border: none;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #777;
+    padding: 50px 8% 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.socials {
+    margin: 20px 0;
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .about-container { flex-direction: column; }
+    .hero-content h1 { font-size: 40px; }
+}
